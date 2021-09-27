@@ -1,4 +1,5 @@
 
+import sys
 import time
 
 from selenium import webdriver
@@ -133,8 +134,8 @@ if __name__ == '__main__':
     """
 
     url = "http://taxila-aws.bits-pilani.ac.in"
-    username = "email"
-    password = "pass"
+    username = sys.argv[1]
+    password = sys.argv[2]
 
     # Assumption is Chrome and Firefox browsers are installed
     launch_test_browser("chrome", url, username, password)
